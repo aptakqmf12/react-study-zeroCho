@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const e = React.createElement;
+    
+        class Gugudan extends React.Component{
+            constructor(props){
+                super( props)
+                this.state = {
+                    leftNum : Math.floor(Math.random() * 9),
+                    rightNum : Math.floor(Math.random() * 9),
+                    value : '',
+                    result : '',
+                }
+            }
+            // 메서드로 따로 뺄경우 꼭 화살표함수를 써야 this가 제대로 바인딩된다.
+            onSubmit = (e) => {
+                e.preventDefault();
+                parseInt(this.state.value) === this.state.leftNum * this.state.rightNum
+                ? 
+                this.setState({
+                    result : '딩동댕',
+                    leftNum : Math.ceil(Math.random() * 9),
+                    rightNum : Math.ceil(Math.random() * 9),
+                    value : ''
+                })
+                :
+                this.setState({
+                    result : '땡',
+                    value : ''
+                })
+                this.input.focus();
+            }
+            onChange = (e) => {
+                this.setState({ value : e.target.value })
+            }
+            onRefInput = (c) => { this.input = c;};
+            render(){
+                return (
+                    <React.Fragment>
+                        <div>{this.state.leftNum}곱하기 {this.state.rightNum}는 ?</div>
+                        <form onSubmit={ this.onSubmit}>
+                            <input ref={ this.onRefInput} type="number" value={this.state.value} onChange={ this.onChange }></input>
+                            <button>입력</button>
+                        </form>
+                        <div>{ this.state.result }</div>
+                    </React.Fragment>
+                    
+                );
+            }
+        }
+    </script>
+
+    <script type="text/babel">
+        ReactDOM.render(<Gugudan />, document.querySelector('#root'))
+    </script>
+</body>
+</html>
