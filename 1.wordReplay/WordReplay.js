@@ -3,7 +3,7 @@ const {Component} = React;
 
 class WordReplay extends Component{
     state = {
-        word : '김태완',
+        word : '김태완이다22',
         value : '',
         result : '',   
     };
@@ -21,7 +21,7 @@ class WordReplay extends Component{
         }
         else{
             this.setState({
-                result : '떙',
+                result : '떙땡땡',
                 value : '',
             })
         }

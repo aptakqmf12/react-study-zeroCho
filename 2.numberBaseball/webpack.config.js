@@ -3,7 +3,7 @@ const webpackRefresh = require('@pmmmwh/react-refresh-webpack-plugin');
 const { webpack } = require('webpack');
 
 module.exports = {
-    name : 'reactStudy',
+    name : 'numberbaseball',
     mode : 'development',
     devtool : 'eval',
     resolve : {
@@ -11,9 +11,9 @@ module.exports = {
     },
     // 입력
     entry : {
-        app : [path.resolve(__dirname, './client')],
+        app : [path.resolve(__dirname, './index.js')],
     },
-    // 룰 -> loaders라고함
+
     module: {
         rules: [{
             test : /\.jsx?/,
