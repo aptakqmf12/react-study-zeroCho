@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:wordReplay": "webpack --config ./1.wordReplay/webpack.config.js",
-    "dev:numberBaseball" : "webpack --config ./2.numberBaseball/webpack.config.js"
+    "dev01": "webpack serve --config ./1.wordReplay/webpack.config.js",
+    "dev02" : "webpack serve --config ./2.numberBaseball/webpack.config.js"
   },
   "repository": {
     "type": "git",
