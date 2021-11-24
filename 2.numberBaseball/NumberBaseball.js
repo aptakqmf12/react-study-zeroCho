@@ -68,9 +68,7 @@ const NumberBaseball = () =>{
                 <input type="number" ref={inputRef} maxLength={4} value={value} onChange={onChangeInput}></input>
             </form>
             <div>시도 : {trys.length}</div>
-
             <Trys trys={trys} />
-            
         </>
     )
 }

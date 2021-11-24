@@ -1,0 +1,12 @@
+.waiting{
+    background-color:yellow;
+}
+.ready{
+    background-color:blue;
+}
+.faile{
+    background-color: red;
+}
+.complite{
+    background-color: green;
+}

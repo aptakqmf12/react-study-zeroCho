@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev01": "webpack serve --config ./1.wordReplay/webpack.config.js",
-    "dev02" : "webpack serve --config ./2.numberBaseball/webpack.config.js"
+    "dev02": "webpack serve --config ./2.numberBaseball/webpack.config.js",
+    "dev03": "webpack serve --config ./3.responseTime/webpack.config.js",
+    "dev04": "webpack serve --config ./4.rsp/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,9 @@
   "homepage": "https://github.com/aptakqmf12/react-study-zeroCho#readme",
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-component": "^2.8.0",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
