@@ -34,7 +34,7 @@ const RSP = () => {
             <ComputerValue bgc={'red'}>{computer.value} {computer.score}</ComputerValue>
             <button>가위</button>
             <button>바위</button>
-            <button>보</button>
+            <button>보22</button>
         </>
     )
 }
