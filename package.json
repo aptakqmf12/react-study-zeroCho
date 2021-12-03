@@ -7,9 +7,7 @@
     "dev01": "webpack serve --config ./1.wordReplay/webpack.config.js",
     "dev02": "webpack serve --config ./2.numberBaseball/webpack.config.js",
     "dev03": "webpack serve --config ./3.responseTime/webpack.config.js",
-    "dev04": "webpack serve --config ./4.rsp/webpack.config.js",
-    "dev05": "webpack serve --config ./5.Lotto클래스형/webpack.config.js",
-    "dev05-1": "webpack serve --config ./5.Lotto함수형/webpack.config.js"
+    "dev04": "webpack serve --config ./4.rsp/webpack.config.js"
   },
   "repository": {
     "type": "git",
