@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import { tableContext } from "./Mine";
+import Td from "./Td";
 
-const Tr = ({ rowData, rowIndex, dispatch }) => {
+const Tr = ({ rowIndex }) => {
+  const { tableData } = useContext(tableContext);
   return (
     <>
-      <tr></tr>
+      <tr>
+        {tableData[0] &&
+          Array(tableData[0].length)
+            .fill()
+            .map((td, i) => {
+              return <Td rowIndex={rowIndex} cellIndex={i} />;
+            })}
+      </tr>
     </>
   );
 };

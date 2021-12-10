@@ -6,6 +6,7 @@ const Form = () => {
   const [row, setRow] = useState(10);
   const [cell, setCell] = useState(10);
   const [mine, setMine] = useState(20);
+  const { dispatch } = useContext(tableContext);
   const value = useContext(tableContext);
 
   const onChangeRow = useCallback((e) => {
@@ -18,7 +19,7 @@ const Form = () => {
     setMine(e.target.value);
   }, []);
   const onClickBtn = useCallback(() => {
-    dispath({ type: START_GAME, row, cell, mine });
+    dispatch({ type: START_GAME, row, cell, mine });
   }, [row, cell, mine]);
 
   return (
@@ -27,7 +28,9 @@ const Form = () => {
         <input placeholder="세로" value={row} onChange={onChangeRow} />
         <input placeholder="가로" value={cell} onChange={onChangeCell} />
         <input placeholder="지뢰" value={mine} onChange={onChangeMine} />
-        <button onClick={onClickBtn}>시작</button>
+        <button type="button" onClick={onClickBtn}>
+          시작
+        </button>
       </form>
     </>
   );
